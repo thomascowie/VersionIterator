@@ -6,6 +6,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.awt.*;
 import java.io.File;
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,7 +25,13 @@ public class Main {
             Node node = nodeList.item(0);
             System.out.println("\nNode Name :" + node.getNodeName());
 
-            System.out.println(node.getTextContent());
+            String versionStr = node.getTextContent();
+            System.out.println(versionStr);
+
+            Date currentYear = new Date();
+            String yearStr = currentYear.toString();
+            yearStr = yearStr.substring(yearStr.length() - 2);
+            System.out.println(versionStr.indexOf(yearStr));
 
         } catch(Exception e) {
             e.printStackTrace();
