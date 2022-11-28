@@ -28,8 +28,6 @@ public class Main {
             String versionStr = node.getTextContent();
             System.out.println(versionStr);
 
-            System.out.println("Logans Test");
-
             Date currentYear = new Date();
             String yearStr = currentYear.toString();
             yearStr = yearStr.substring(yearStr.length() - 2);
